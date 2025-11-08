@@ -1,4 +1,4 @@
-package com.example.strategy;
+package com.example.strategy_pattern;
 public class SportsDrive implements DriveStratergy{
     @Override
     public void drive(){

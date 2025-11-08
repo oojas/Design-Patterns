@@ -1,4 +1,4 @@
-package com.example.strategy;
+package com.example.strategy_pattern;
 public class ElectricDrive implements DriveStratergy {
     @Override
     public void drive(){
