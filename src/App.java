@@ -1,3 +1,4 @@
+import com.example.decorator_pattern.*;
 import com.example.observer_pattern.observable.IphoneObservable;
 import com.example.observer_pattern.observable.IphoneObservableImpl;
 import com.example.observer_pattern.observer.ClientObserver;
@@ -15,6 +16,9 @@ public class App {
         bmw.drive();
         tesla.drive();
        */
+
+        /*
+        * OBSERVER PATTERN
         IphoneObservableImpl iphoneObservable=new IphoneObservableImpl();
         ClientObserver clientObserver = new ClientObserver("Ashok Gupta","agd@gmail.com","656876453",true);
         ClientObserver clientObserver1 = new ClientObserver("Ramila Dutta","sudh@gmail.com","657532143",false);
@@ -24,6 +28,15 @@ public class App {
         iphoneObservable.add(clientObserver2);
         iphoneObservable.setCount(0);
         iphoneObservable.setCount(10);
+
+         */
+
+        BasePizza pizza=new Mushroom(new Margerita());
+        BasePizza pizza1=new Jelepeeno(new Farmhouse());
+        BasePizza pizza2=new Jelepeeno(new Mushroom(new IndiTandoori()));
+        System.out.println("PIZZA WITH MUSHROOM AND MARGERITA COST "+ pizza.cost());
+        System.out.println("PIZZA WITH JELEPEENO AND FARMHOUSE COST "+pizza1.cost());
+        System.out.println("PIZZA WITH JELEPEENO AND MUSHROOM ON INDITANDOORI COST "+pizza2.cost());
     }
 
 
