@@ -1,5 +1,7 @@
 
 import com.example.patterns.decorator_pattern.*;
+import com.example.patterns.factory_pattern.Shape;
+import com.example.patterns.factory_pattern.ShapeImpl;
 import com.example.patterns.observer_pattern.observable.IphoneObservableImpl;
 import com.example.patterns.observer_pattern.observer.ClientObserver;
 import com.example.patterns.strategy_pattern.Drive;
@@ -10,7 +12,7 @@ import com.example.patterns.strategy_pattern.SportsDrive;
 public class App {
     public static void main(String[] args) throws Exception {
         /*
-        * STRATERGY PATTERN
+        * STRATEGY PATTERN
         *
 
 
@@ -38,13 +40,30 @@ public class App {
         iphoneObservable.setCount(10);
       */
 
-
+        /*
+        * DECORATOR PATTERN
+        *
         BasePizza pizza=new Mushroom(new Margerita());
         BasePizza pizza1=new Jelepeeno(new Farmhouse());
         BasePizza pizza2=new Jelepeeno(new Mushroom(new IndiTandoori()));
         System.out.println("PIZZA WITH MUSHROOM AND MARGERITA COST "+ pizza.cost());
         System.out.println("PIZZA WITH JELEPEENO AND FARMHOUSE COST "+pizza1.cost());
         System.out.println("PIZZA WITH JELEPEENO AND MUSHROOM ON INDITANDOORI COST "+pizza2.cost());
+
+         */
+        /*
+        FACTORY PATTERN
+        ShapeImpl circleShape=new ShapeImpl("CIRCLE");
+        ShapeImpl squareShape=new ShapeImpl("SQUARE");
+        ShapeImpl rectShape=new ShapeImpl("RECTANGLE");
+        Shape c=circleShape.getShape();
+        Shape s=squareShape.getShape();
+        Shape r=rectShape.getShape();
+        c.draw();
+        s.draw();
+        r.draw();
+
+         */
     }
 
 
